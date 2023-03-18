@@ -2,10 +2,8 @@
   "name": "blogapi",
   "version": "0.0.1",
   "description": "This is a server application for a blog application ",
-  "main": "index.js",
-  "engines": {
-    "node": "14.x"
-  },
+  "main": "server.js",
+   
   "scripts": {
     "start": "node server.js"
   },
