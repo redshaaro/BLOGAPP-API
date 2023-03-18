@@ -16,11 +16,11 @@ exports.createPost = async (req, res) => {
 };
 
 //GET SINGLE POST
-exports.getPost = (req, res) => {
+exports.getPost = async (req, res) => {
   const paramId = req.params.id;
   try {
     try {
-      const post = Post.findById(paramId);
+      const post = await Post.findById(paramId);
       res.status(200).json({
         data: post,
       });
