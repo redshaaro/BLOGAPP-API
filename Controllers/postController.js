@@ -42,6 +42,7 @@ exports.getPosts = async (req, res) => {
   try {
     let posts;
     if (username) {
+      return {"dummy":"loading"}
       posts = await Post.find({ username });
     } else if (catName) {
       posts = await Post.find({
