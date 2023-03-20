@@ -5,8 +5,15 @@ const categoryRouter = require("./Routes/categoryRoutes");
 const authRouter = require("./Routes/authRoute");
 const multer = require("multer");
 const path = require("path");
+const cors = require("cors");
 
 const app = express();
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
+
 app.use("/images", express.static(path.join(__dirname, "/images")));
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
