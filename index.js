@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = require("./app");
 dotenv.config({ path: "./config.env" });
 app.use(cors({
-  origin:"'http://localhost:3000"
+  origin:"*"
 }))
 
 const DB = process.env.CONNECTION_STRING.replace(
