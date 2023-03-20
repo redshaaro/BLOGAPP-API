@@ -1,4 +1,4 @@
-const Post = require("../Models/postModel");
+const Post = require(`${__dirname}/../Models/postModel`);
 
 //create post
 exports.createPost = async (req, res) => {
