@@ -9,9 +9,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(
-  cors({
-    origin: "https://blog-app-fullstack.vercel.app/",
-  })
+  cors()
 );
 
 app.use("/images", express.static(path.join(__dirname, "/images")));
